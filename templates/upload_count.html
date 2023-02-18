@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Upload Count</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1 style="text-align: center;">Upload Count</h1>
+	<table>
+		<tr>
+			<th style="font-size: large;font-weight: bold;">Channel Name</th>
+			<th style="font-size: large;font-weight: bold;">Upload Count</th>
+		</tr>
+		{% for i in uploads %}
+			<tr>
+				<td>{{i}}</td>
+				<td style="text-align: center;">{{uploads[i]}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
